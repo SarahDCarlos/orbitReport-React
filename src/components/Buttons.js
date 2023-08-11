@@ -1,9 +1,19 @@
-const Buttons = () => {
+import satData from "./satData";
+
+const Buttons = ({ filterByType, setSat, displaySats }) => {
   return (
     <div>
-      <button>Sarah Carlos was here</button>
-      <button>All Orbits</button>
-      </div>
+      {displaySats.map((sat, id) => {
+        return (
+          <button onClick={() => filterByType(sat)} key={id}>
+            {sat} Orbit
+          </button>
+        );
+      })}
+      <button onClick={() => setSat(satData)} data-testid="show-all-button">
+        Show All Satellites
+      </button>
+    </div>
   );
 };
 
