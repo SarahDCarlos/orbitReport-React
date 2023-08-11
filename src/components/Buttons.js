@@ -1,7 +1,7 @@
 const Buttons = () => {
   return (
     <div>
-      <button>Placeholder Button</button>
+      <button>Sarah Carlos was here</button>
       <button>All Orbits</button>
       </div>
   );
